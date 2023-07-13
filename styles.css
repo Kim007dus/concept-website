@@ -1,42 +1,185 @@
-/*////////////////////////
-    Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+:root {
+    --color-gradient: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    --color-purple: #5722CD;
+    --color-bl: #4845E4;
+    --color-buttons: #ED4385;
+    --color-text: #0C0C0C;
+    --color-bigtext: #F2F0FF;
+    --color-bg-projects: #F3F6F9;
+    --color-text-services: #7A7A7A;
+    --height-footer: 30px;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    min-width: 1200px;
+    color: var(--color-text);
+}
+
+a {
     text-decoration: none;
-    list-style: none;
+}
+
+header a {
+    color: var(--color-bigtext);
 }
 
 img {
     width: 100%;
 }
 
-/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+button {
+    background-color: var(--color-buttons);
+    color: var(--color-bigtext);
+    border-radius: 30px;
+    border: 1px solid var(--color-buttons);
+    padding: 15px;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 1px 1px 1px -7px rgba(204, 204, 204, 1);
+    text-transform: uppercase;
+}
 
-/* --------------- 3.1 Reusables ----------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-bl);
+    background: var(--color-gradient);
+    color: var(--color-bigtext);
+    padding-bottom: 200px;
+    position: relative;
+}
 
-/* --------------- 3.2 Other --------------------------- */
+.navbar {
+    align-self: end;
+    padding: 15px;
 
-/* ------------------------------- 4. Areas ---------------------------------------- */
+}
 
-/* --------------- 4.1 Header ------------------------- */
+.navlist {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-decoration: none;
+    list-style: none;
+}
 
-/* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+header img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 450px;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hello {
+    max-width: 800px;
+    text-align: center;
+    margin: 100px;
+    font-size: 35px;
+}
+
+.text {
+    background: var(--color-bl);
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.extra {
+    font-size: 20px;
+    color: var(--color-text);
+    padding-top: 75px;
+}
+
+.casestudies {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-projects);
+}
+
+.studies {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 50px;
+}
+
+.contentblock img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+.contentblock a {
+    text-transform: uppercase;
+    color: var(--color-purple);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.imgwrapper {
+    grid-column: 2/3;
+}
+
+.contactus {
+    background: var(--color-bl);
+    background: var(--color-gradient);
+    color: var(--color-bigtext);
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--color-text);
+    color: var(--color-bigtext);
+    text-align: center;
+    height: var(--height-footer)
+
+}
+
