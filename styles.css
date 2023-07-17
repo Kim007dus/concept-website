@@ -22,6 +22,14 @@
 
 }
 
+::placeholder {
+    color: var(--color-text-services);
+}
+
+:hover {
+    cursor: pointer;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -53,6 +61,8 @@ button {
     border: 1px solid var(--color-buttons);
     padding: 15px;
     margin-top: 25px;
+    margin-bottom: 25px;
+    min-width: 150px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 1px 1px 1px -7px rgba(204, 204, 204, 1);
     text-transform: uppercase;
@@ -68,6 +78,22 @@ header {
     padding-bottom: 200px;
     position: relative;
 }
+
+/*.linebreak 1 {*/
+/*    height: 0;*/
+/*    width: 0;*/
+/*    border-left: 100vw solid var(--color-bl);*/
+/*    border-bottom: 2vw solid transparent;*/
+/*    margin-top: 0;*/
+/*}*/
+
+/*.linebreak 2 {*/
+/*    height: 0;*/
+/*    width: 0;*/
+/*    border-right: 100vw solid var(--color-bl);*/
+/*    border-top: 2vw solid transparent;*/
+/*    margin-top: 0;*/
+/*}*/
 
 .navbar {
     align-self: end;
@@ -110,7 +136,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .hello {
@@ -118,14 +143,28 @@ main {
     text-align: center;
     margin: 100px;
     font-size: 35px;
+    position: relative;
 }
 
-.text {
+.hello::after {
+    content: "Hello";
+    color: var(--color-bl);
+    font-size: 300px;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hello .text {
     background: var(--color-bl);
     background: var(--color-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 20px;
+    margin-top: 100px;
 }
 
 .extra {
@@ -138,17 +177,48 @@ main {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-projects);
+    padding: 50px;
+    position: relative;
+}
+
+.casestudies::after {
+    content: "work";
+    color: white;
+    font-size: 300px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+
 }
 
 .studies {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    /*padding: 50px;*/
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.studies:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.contentblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    gap: 25px;
+
+
 }
 
 .contentblock img {
-    width: 100px;
+    width: 50px;
     aspect-ratio: 1/1;
+
 }
 
 .contentblock a {
@@ -156,30 +226,168 @@ main {
     color: var(--color-purple);
     font-size: 12px;
     font-weight: 900;
+
+}
+
+.contentblock a:hover::after {
+    content: "----";
+    display: inline-block;
 }
 
 .imgwrapper {
-    grid-column: 2/3;
+    padding: 50px;
+
+}
+
+.imgwrapper img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    width: 100%;
+}
+
+.services {
+    position: relative;
+}
+.services::after {
+     content: "services";
+     color: var(--color-bg-projects);
+     font-size: 250px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+ }
+
+.services h3 {
+    color: var(--color-bl);
+    padding-bottom: 10px;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 900px;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.card {
+    flex-basis: 220px;
+    color: var(--color-text-services);
+    padding: 10px;
+    border: 2px solid var(--color-bl);
+    font-size: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.card img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    padding: 0;
 }
 
 .contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background: var(--color-bl);
     background: var(--color-gradient);
     color: var(--color-bigtext);
+    padding-top: 50px;
 
+}
+
+.contactus h2 {
+    padding: 30px;
+    font-size: 40px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    /*flex-grow: 2;*/
     justify-content: center;
+    align-items: center;
+    min-width: 600px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
 }
 
-footer {
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+input, textarea {
+   width: 100%;
+}
+
+.footer {
     background-color: var(--color-text);
     color: var(--color-bigtext);
     text-align: center;
+    padding: 10px;
+    font-size: 10px;
     height: var(--height-footer)
 
 }
 
+@media screen and (max-width: 767px) {
+    body {
+        max-width: 767px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .navbar {
+        align-self: center;
+        font-size: 30px;
+
+    }
+
+    .hello {
+        font-size: 45px;
+    }
+
+    .studies {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 30px;
+
+    }
+
+    .services::after {
+        left: -30px;
+
+    }
+
+    .cardcontainer {
+        max-width: 767px;
+    }
+
+    .card {
+        flex-basis: 600px;
+        font-size: 30px;
+    }
+    .contactus h2 {
+        font-size: 60px;
+    }
+    .contactus {
+        font-size: 30px;
+
+    }
+
+    .footer {
+        font-size: 25px;
+    }
+}
