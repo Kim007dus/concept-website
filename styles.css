@@ -79,21 +79,34 @@ header {
     position: relative;
 }
 
-/*.linebreak 1 {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-left: 100vw solid var(--color-bl);*/
-/*    border-bottom: 2vw solid transparent;*/
-/*    margin-top: 0;*/
-/*}*/
+.linebreak {
+    height: 0;
+    width: 0;
+    border-right: 1200px solid var(--color-purple);
+    border-bottom: 8vw solid transparent;
 
-/*.linebreak 2 {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-right: 100vw solid var(--color-bl);*/
-/*    border-top: 2vw solid transparent;*/
-/*    margin-top: 0;*/
-/*}*/
+}
+.linebreakhello {
+    height: 0;
+    width: 0;
+    border-left: 1200px solid var(--color-bg-projects);
+    border-top: 8vw solid transparent;
+}
+
+.linebreakgrey {
+    height: 0;
+    width: 0;
+    border-right: 1200px solid var(--color-bg-projects);
+    border-bottom: 8vw solid transparent;
+
+}
+.linebreakfooter {
+    height: 0;
+    width: 0;
+    border-left: 1200px solid var(--color-bl);
+    border-top: 8vw solid transparent;
+}
+
 
 .navbar {
     align-self: end;
@@ -124,7 +137,7 @@ header img {
     width: 100px;
     aspect-ratio: 1/1;
     position: absolute;
-    top: 450px;
+    top: 500px;
 }
 
 h1 {
