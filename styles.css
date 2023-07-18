@@ -34,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    min-width: 1200px;
+    min-width: 1270px;
     color: var(--color-text);
 }
 
@@ -78,35 +78,6 @@ header {
     padding-bottom: 200px;
     position: relative;
 }
-
-/*.linebreak {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-right: 100vw solid var(--color-purple);*/
-/*    border-bottom: 8vw solid transparent;*/
-
-/*}*/
-/*.linebreakhello {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-left: min(1400px) solid var(--color-bg-projects);*/
-/*    border-top: 8vw solid transparent;*/
-/*}*/
-
-/*.linebreakgrey {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-right: min(1400px) solid var(--color-bg-projects);*/
-/*    border-bottom: 8vw solid transparent;*/
-
-/*}*/
-/*.linebreakfooter {*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*    border-left: 100vw solid var(--color-bl);*/
-/*    border-top: 8vw solid transparent;*/
-/*}*/
-
 
 .navbar {
     align-self: end;
@@ -193,6 +164,7 @@ main {
     background-color: var(--color-bg-projects);
     padding: 50px;
     position: relative;
+
 }
 
 .casestudies::after {
