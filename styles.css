@@ -77,6 +77,8 @@ header {
     color: var(--color-bigtext);
     padding-bottom: 200px;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
 }
 
 .navbar {
@@ -108,7 +110,7 @@ header img {
     width: 100px;
     aspect-ratio: 1/1;
     position: absolute;
-    top: 500px;
+    top: 450px;
 }
 
 h1 {
@@ -162,8 +164,9 @@ main {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-projects);
-    padding: 50px;
+    padding: 70px;
     position: relative;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
 
 }
 
@@ -172,7 +175,7 @@ main {
     color: white;
     font-size: 300px;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 300px;
 
 }
@@ -283,6 +286,7 @@ main {
     background: var(--color-gradient);
     color: var(--color-bigtext);
     padding-top: 50px;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
 
 }
 
